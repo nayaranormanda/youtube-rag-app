@@ -2,6 +2,8 @@
 
 A Streamlit web application that enables users to ask questions about YouTube videos using Retrieval-Augmented Generation (RAG). The app fetches video transcripts, creates embeddings, and uses AI to answer questions based on the video content.
 
+**Main Purpose**: This project was created to understand and utilize different LangChain components in a practical, real-world application. It demonstrates the integration of various LangChain modules including text splitters, vector stores, embeddings, retrievers, prompts, and chains to build a complete RAG system.
+
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-v1.28+-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -14,6 +16,8 @@ A Streamlit web application that enables users to ask questions about YouTube vi
 - 🌐 **Multi-language Support**: Supports videos with English and Hindi transcripts
 - 🎨 **Clean UI**: Beautiful Streamlit interface with intuitive design
 - ⚡ **Fast Processing**: Efficient vector storage and retrieval
+- 🔗 **LangChain Integration**: Demonstrates practical usage of multiple LangChain components
+- 📚 **Educational**: Perfect for learning how to build RAG systems with LangChain
 
 ## 🚀 Demo
 
@@ -91,11 +95,16 @@ youtube-rag-app/
 
 ## 🔧 How It Works
 
+This project demonstrates the practical implementation of various LangChain components:
+
 1. **Transcript Fetching**: Uses `youtube-transcript-api` to extract video transcripts
-2. **Text Processing**: Splits transcript into manageable chunks using LangChain's text splitter
-3. **Embeddings**: Creates vector embeddings using HuggingFace's `all-mpnet-base-v2` model
-4. **Vector Storage**: Stores embeddings in FAISS for efficient similarity search
-5. **Question Answering**: Uses Perplexity AI with retrieved context to generate answers
+2. **Text Processing**: Implements LangChain's `RecursiveCharacterTextSplitter` for optimal text chunking
+3. **Embeddings**: Utilizes LangChain's `HuggingFaceEmbeddings` with `sentence-transformers/all-mpnet-base-v2` model
+4. **Vector Storage**: Leverages LangChain's `FAISS` integration for efficient similarity search
+5. **Retrieval**: Creates a retriever using LangChain's vector store interface
+6. **Prompt Engineering**: Uses LangChain's `PromptTemplate` for structured prompt creation
+7. **Chain Construction**: Implements LangChain's `RunnableParallel` and `RunnableLambda` for complex workflows
+8. **Question Answering**: Integrates everything into a complete RAG pipeline using LangChain's chain paradigm
 
 ## 🎯 Usage Examples
 
@@ -154,7 +163,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions or suggestions, please open an issue on GitHub or contact [your-email@example.com](mailto:your-email@example.com).
+For questions or suggestions, please open an issue on GitHub or contact [harshvirani.91@gmail.com](mailto:harshvirani.91@gmail.com).
 
 ---
 
